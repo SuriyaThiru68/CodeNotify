@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVBAR -->
     <nav>
         <div class="nav-left">
             <button id="contestsTab" class="tab active">Contests</button>
@@ -18,7 +17,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="hero">
         <h1><span>&lt;/&gt;</span> CodeNotify</h1>
         <p>Never miss a coding contest again. Track competitions across all platforms, set smart reminders, and get notified via WhatsApp or email.</p>
@@ -26,27 +24,18 @@
         <button id="calendarBtn">View Calendar</button>
     </section>
 
-    <!-- CONTESTS PAGE -->
     <section id="contestsPage" class="page">
         <input type="text" id="search" placeholder="Search contests...">
-        <div id="contestsList">
-            <!-- Contest cards inserted here by JS -->
-        </div>
+        <div id="contestsList"></div>
     </section>
 
-    <!-- CALENDAR PAGE -->
     <section id="calendarPage" class="page hidden">
         <div id="calendarContainer">
-            <div id="calendar">
-                <!-- Simple calendar rendered by JS -->
-            </div>
-            <div id="eventList">
-                <!-- Events here -->
-            </div>
+            <div id="calendar"></div>
+            <div id="eventList"></div>
         </div>
     </section>
 
-    <!-- SETTINGS PAGE -->
     <section id="settingsPage" class="page hidden">
         <h2>Notification Settings</h2>
         <form id="notifForm">
