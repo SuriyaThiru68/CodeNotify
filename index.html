@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeNotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-left">
+            <button id="contestsTab" class="tab active">Contests</button>
+            <button id="calendarTab" class="tab">Calendar</button>
+            <button id="settingsTab" class="tab">Settings</button>
+        </div>
+        <div class="nav-right">
+            <span id="connectionStatus" class="connection-status">🟡 Connecting...</span>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <h1><span>&lt;/&gt;</span> CodeNotify</h1>
+        <p>Never miss a coding contest again. Track competitions across all platforms, set smart reminders, and get notified via WhatsApp or email.</p>
+        <button id="setupBtn">Setup Notifications</button>
+        <button id="calendarBtn">View Calendar</button>
+    </section>
+
+    <!-- CONTESTS PAGE -->
+    <section id="contestsPage" class="page">
+        <input type="text" id="search" placeholder="Search contests...">
+        <div id="contestsList">
+            <!-- Contest cards inserted here by JS -->
+        </div>
+    </section>
+
+    <!-- CALENDAR PAGE -->
+    <section id="calendarPage" class="page hidden">
+        <div id="calendarContainer">
+            <div id="calendar">
+                <!-- Simple calendar rendered by JS -->
+            </div>
+            <div id="eventList">
+                <!-- Events here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SETTINGS PAGE -->
+    <section id="settingsPage" class="page hidden">
+        <h2>Notification Settings</h2>
+        <form id="notifForm">
+            <label>
+                <input type="checkbox" id="emailNotif" checked> Email Notifications
+            </label>
+            <input type="email" id="email" placeholder="your@email.com">
+
+            <label>
+                <input type="checkbox" id="waNotif"> WhatsApp Notifications
+            </label>
+            <input type="text" id="waNumber" placeholder="WhatsApp Number" disabled>
+
+            <label>Reminder Time (minutes before contest):</label>
+            <input type="number" id="reminderTime" value="30" min="1" max="120">
+            <button type="submit">Save Settings</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
